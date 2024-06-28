@@ -36,7 +36,3 @@ The projects listed below are to help me hone in on my JS speed of both working 
   - Google
      *Search for debuging soloutions*
      *Obtain resources such as images online to be used within the site*
-
-
-**Collabrators:** 
-
