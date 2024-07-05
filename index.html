@@ -1785,8 +1785,8 @@
                                 }
                                 #olb-test-UK2024028 .topnav-centered a {
                                     position: relative;
-                                    top: 0;
-                                    left: 0;float: none;
+                                    top: 24px;
+                                    float: none;
                                 }
                             }
                         </style>
@@ -1809,8 +1809,44 @@
                         </div>
                     </li>
                     <li><h4>Equal Width Menu Links</h4>
-                        <style id="olb-test-UK2024029-style"></style>
-                        <div id="olb-test-UK2024029"></div>
+                        <style id="olb-test-UK2024029-style">
+                            #olb-test-UK2024029 .navbar {
+                                width: 100%;
+                                background-color: #555;
+                                overflow: auto;
+                            }
+                            #olb-test-UK2024029 .navbar a {
+                                float: left;
+                                padding: 12px;
+                                color: white;
+                                text-decoration: none;
+                                text-align: center;
+                                width: 25%;
+                                box-sizing: border-box;
+                            }
+                            #olb-test-UK2024029 .navbar a:hover {
+                                background-color: #000;
+                            }
+                            #olb-test-UK2024029 .navbar a.active {
+                                background-color: #04AA6D;
+                            }
+                            @media screen and (max-width: 500px) {
+                                #olb-test-UK2024029 .navbar a {
+                                    float: none;
+                                    display: block;
+                                    width: 100%;
+                                    text-align: left;
+                                }
+                            }
+                        </style>
+                        <div id="olb-test-UK2024029">
+                            <div class="navbar">
+                                <a href="#" class="active">Home</a>
+                                <a href="#">Search</a>
+                                <a href="#">Contact</a>
+                                <a href="#">Login</a>
+                            </div>
+                        </div>
                         <script></script>
                     </li>
                     <li><h4>Fixed Menu</h4>
