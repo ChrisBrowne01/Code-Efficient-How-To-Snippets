@@ -2124,9 +2124,76 @@
                         </script>
                     </li>
                     <li><h4>Sticky Navbar</h4>
-                        <style id="olb-test-UK2024034-style"></style>
-                        <div id="olb-test-UK2024034"></div>
-                        <script></script>
+                        <style id="olb-test-UK2024034-style">
+                            #olb-test-UK2024034 {
+                                overflow-y: scroll;
+                                height: 300px;
+                            }
+                            #olb-test-UK2024034 .header {
+                                background-color: #f1f1f1;
+                                padding: 30px;
+                                text-align: center;
+                            }
+                            /* Style the navbar */
+                            #olb-test-UK2024034 #navbar {
+                            overflow: hidden;
+                            background-color: #333;
+                            }
+
+                            /* Navbar links */
+                            #olb-test-UK2024034 #navbar a {
+                            float: left;
+                            display: block;
+                            color: #f2f2f2;
+                            text-align: center;
+                            padding: 14px;
+                            text-decoration: none;
+                            }
+
+                            /* Page content */
+                            #olb-test-UK2024034 .content {
+                            padding: 16px;
+                            }
+
+                            /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+                            #olb-test-UK2024034 .sticky {
+                            position: sticky;
+                            top: 0;
+                            width: 100%;
+                            }
+                            #olb-test-UK2024034 .sticky + .content {
+                                padding-top: 60px;
+                            }
+                        </style>
+                        <div id="olb-test-UK2024034">
+                            <div class="header">
+                                <h2>Scroll Down</h2>
+                                <p>Scroll down to see the sticky effect.</p>
+                            </div>
+                            <div id="navbar">
+                                <a href="#home">Home</a>
+                                <a href="#about">About</a>
+                                <a href="#contact">Contact</a>
+                                <a href="#blog">Blog</a>
+                            </div>
+                            <div class="content">
+                                <h3>Sticky Navigation Example</h3>
+                                <p>The navbar will stick to the top when you reach its scroll position.</p>
+                                <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                              </div>                              
+                        </div>
+                        <script>
+                        document.querySelector("#olb-test-UK2024034").addEventListener("scroll", function() {
+                            const navbar = document.querySelector("#olb-test-UK2024034 #navbar");
+                            let sticky = navbar.offsetTop;
+                            (this.scrollTop + 8030 >= (sticky)) ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+                        });</script>
                     </li>
                     <li><h4>Navbar on Image</h4>
                         <style id="olb-test-UK2024035-style"></style>
