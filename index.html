@@ -2191,16 +2191,13 @@
                         <script>
                         document.querySelector("#olb-test-UK2024034").addEventListener("scroll", function() {
                             const navbar = document.querySelector("#olb-test-UK2024034 #navbar");
-                            let sticky = navbar.offsetTop;
+                            let sticky = navbar.offsetTop; /* Offset top of nav bar is 8191 */
+                            /* #olb-test-UK2024034 scroll top will start at 161 less than nav bar */
                             (this.scrollTop + 8030 >= (sticky)) ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
                         });</script>
                     </li>
                     <li><h4>Navbar on Image</h4>
                         <style id="olb-test-UK2024035-style">
-                            #olb-test-UK2024035 {
-                                overflow-y: scroll;
-                                height: 400px;
-                            }
                             #olb-test-UK2024035 .bg-img {
                                 background-image: url("media/img_nature.jpg");
                                 min-height: 380px;
@@ -2245,9 +2242,46 @@
                         </div>
                     </li>
                     <li><h4>Hover Dropdowns</h4>
-                        <style id="olb-test-UK2024036-style"></style>
-                        <div id="olb-test-UK2024036"></div>
-                        <script></script>
+                        <style id="olb-test-UK2024036-style">
+                            #olb-test-UK2024036 .dropbtn {
+                                background-color: #04AA6D;
+                                color: white;
+                                padding: 16px;
+                                font-size: 16px;
+                                border: none;
+                            }
+                            #olb-test-UK2024036 .dropdown {
+                                position: relative;
+                                display: inline-block;
+                            }
+                            #olb-test-UK2024036 .dropdown-content {
+                                display: none;
+                                position: absolute;
+                                background-color: #f1f1f1;
+                                min-width: 160px;
+                                box-shadow: 0px 8px 16px 0px rbga(0,0,0,0.2);
+                                z-index: 1;
+                            }
+                            #olb-test-UK2024036 .dropdown-content a {
+                                color: black;
+                                padding: 12px 16px;
+                                text-decoration: none;
+                                display: block;
+                            }
+                            #olb-test-UK2024036 .dropdown-content a:hover {background-color: #ddd;}
+                            #olb-test-UK2024036 .dropdown:hover .dropdown-content {display: block;}
+                            #olb-test-UK2024036 .dropdown:hover .dropbtn {background-color: #3e8e41;}
+                        </style>
+                        <div id="olb-test-UK2024036">
+                            <div class="dropdown">
+                                <button class="dropbtn">Dropdown</button>
+                                <div class="dropdown-content">
+                                    <a href="#">Link 1</a>
+                                    <a href="#">Link 2</a>
+                                    <a href="#">Link 3</a>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                     <li><h4>Click Dropdowns</h4>
                         <style id="olb-test-UK2024037-style"></style>
