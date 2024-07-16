@@ -2284,14 +2284,120 @@
                         </div>
                     </li>
                     <li><h4>Click Dropdowns</h4>
-                        <style id="olb-test-UK2024037-style"></style>
-                        <div id="olb-test-UK2024037"></div>
-                        <script></script>
+                    <style id="olb-test-UK2024036-style">
+                        #olb-test-UK2024037 .dropbtn {
+                            background-color: #04AA6D;
+                            color: white;
+                            padding: 16px;
+                            font-size: 16px;
+                            border: none;
+                        }
+                        #olb-test-UK2024037 .dropdown {
+                            position: relative;
+                            display: inline-block;
+                        }
+                        #olb-test-UK2024037 .dropdown-content {
+                            display: none;
+                            position: absolute;
+                            background-color: #f1f1f1;
+                            min-width: 160px;
+                            box-shadow: 0px 8px 16px 0px rbga(0,0,0,0.2);
+                            z-index: 1;
+                        }
+                        #olb-test-UK2024037 .dropdown-content a {
+                            color: black;
+                            padding: 12px 16px;
+                            text-decoration: none;
+                            display: block;
+                        }
+                        #olb-test-UK2024037 .dropdown.show .dropdown-content a:hover {background-color: #ddd;}
+                        #olb-test-UK2024037 .dropdown.show .dropdown-content {display: block;} /*  */
+                        #olb-test-UK2024037 .dropdown.show .dropbtn {background-color: #3e8e41;}
+                    </style>
+                    <div id="olb-test-UK2024037">
+                        <div class="dropdown">
+                            <button class="dropbtn">Dropdown</button>
+                            <div id="my-dropdown" class="dropdown-content">
+                                <a href="#">Link 1</a>
+                                <a href="#">Link 2</a>
+                                <a href="#">Link 3</a>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        document.querySelector("#olb-test-UK2024037 .dropbtn").addEventListener("click", function(event) {
+                            event.stopPropagation();
+                            document.querySelector("#olb-test-UK2024037 .dropdown").classList.toggle("show");
+                        });
+                        document.addEventListener("click", function() {
+                        if (!event.target.matches(".dropbtn")) {
+                                const dropdowns = document.querySelectorAll(".dropdown-content");
+                                dropdowns.forEach(dropdown => {
+                                     if (dropdown.classList.contains("show")) {dropdown.classList.remove("show")}
+                                });
+                            };
+                        });
+                    </script>
                     </li>
                     <li><h4>Cascading Dropdown</h4>
                         <style id="olb-test-UK2024038-style"></style>
-                        <div id="olb-test-UK2024038"></div>
-                        <script></script>
+                        <div id="olb-test-UK2024038">
+                            <form name="form1" id="form1" action="action.php" method="POST">
+                                Subjects: <select name="subject" id="subject">
+                                    <option value="" selected="selected">Selected Subject</option>
+                                </select>
+                                <br><br>
+                                Topics: <select name="topic" id="topic">
+                                    <option value="" selected="selected">Please select subject first</option>
+                                </select>
+                                <br><br>
+                                Chapters: <select name="chapter" id="chapter">
+                                    <option value="" selected="selected">Please select subject first</option>
+                                </select>
+                                <input type="submit" value="Submit">
+                            </form>
+                            <p>See <i>"action.php</i> for how to output on subimition of form for cascading dropdowns.</p>
+                        </div>
+                        <script>
+                            let subjectObject = {
+                                "Front-end": {
+                                    "HTML": ["Links", "Images", "Tables", "Lists"],
+                                    "CSS": ["Borders", "Margins", "Backgrounds", "Float"],
+                                    "JavaScript": ["Variables", "Operators", "Functions", "Conditions"]
+                                },
+                                "Back-end": {
+                                    "PHP": ["Variables", "Strings", "Arrays"],
+                                    "SQL": ["SELECT", "UPDATE", "DELETE"]
+                                }
+                            }
+
+                            window.addEventListener("load", function() {
+                                const subjectSel = document.querySelector("#subject");
+                                const topicSel = document.querySelector("#topic");
+                                const chapterSel = document.querySelector("#chapter");
+                                const populateOptions = (selectElement, options) => {
+                                    selectElement.innerHTML = '<option value="" selected="selected">Select an option</option>';
+                                    options.forEach(option => {
+                                        selectElement.add(new Option(option, option));
+                                    });
+                                };
+                                /* Populate subjects */
+                                Object.keys(subjectObject).forEach(subject => {
+                                    subjectSel.add(new Option(subject, subject));
+                                });
+                                /* Enable populating topics */
+                                subjectSel.addEventListener("change", () => {
+                                    const topics = Object.keys(subjectObject[subjectSel.value] || {});
+                                    populateOptions(topicSel, topics);
+                                    chapterSel.innerHTML = '<option value="" selected="selected">Please select topic first</option>';
+                                });
+                                /* Enable populating chapters */
+                                topicSel.addEventListener("change", () => {
+                                    const chapters = subjectObject[subjectSel.value][topicSel.value] || [];
+                                    populateOptions(chapterSel, chapters);
+                                });
+                            });
+                        </script>
                     </li>
                     <li><h4>Dropdown in Topnav</h4>
                         <style id="olb-test-UK2024039-style"></style>
