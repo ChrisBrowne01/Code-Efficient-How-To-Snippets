@@ -2340,7 +2340,6 @@
                     </script>
                     </li>
                     <li><h4>Cascading Dropdown</h4>
-                        <style id="olb-test-UK2024038-style"></style>
                         <div id="olb-test-UK2024038">
                             <form name="form1" id="form1" action="action.php" method="POST">
                                 Subjects: <select name="subject" id="subject">
@@ -2400,8 +2399,76 @@
                         </script>
                     </li>
                     <li><h4>Dropdown in Topnav</h4>
-                        <style id="olb-test-UK2024039-style"></style>
-                        <div id="olb-test-UK2024039"></div>
+                        <style id="olb-test-UK2024039-style">
+                            #olb-test-UK2024039 .navbar {
+                                overflow: hidden;
+                                background-color: #333;
+                                font-family: Arial;
+                            }
+                            #olb-test-UK2024039 .navbar a {
+                                float: left;
+                                font-size: 16px;
+                                color: white;
+                                text-align: center;
+                                padding: 14px 16px;
+                                text-decoration: none;
+                            }
+                            #olb-test-UK2024039 .dropdown {
+                                float: left;
+                                overflow: hidden;
+                            }
+                            #olb-test-UK2024039 .dropdown .dropbtn {
+                                font-size: 16px;
+                                border: none;
+                                outline: none;
+                                color: white;
+                                padding: 14px 16px;
+                                background-color: inherit;
+                                font-family: inherit;
+                                margin: 0;
+                            }
+                            #olb-test-UK2024039 .navbar a:hover, #olb-test-UK2024039 .dropdown:hover .dropbtn {
+                                background-color: red;
+                            }
+                            #olb-test-UK2024039 .dropdown-content {
+                                display: none;
+                                position: absolute;
+                                background-color: #f9f9f9;
+                                min-width: 160px;
+                                box-shadow: 0px 8px 16px 0px rgba(0,0,0, 0.2);
+                                z-index: 1;
+                            }
+                            #olb-test-UK2024039 .dropdown-content a {
+                                float: none;
+                                color: #000;
+                                padding: 12px 16px;
+                                text-decoration: none;
+                                display: block;
+                                text-align: left;
+                            }
+                            #olb-test-UK2024039 .dropdown-content a:hover {
+                                background-color: #ddd;
+                            }
+                            #olb-test-UK2024039 .dropdown:hover .dropdown-content {
+                                display: block;
+                            }
+                        </style>
+                        <div id="olb-test-UK2024039">
+                            <div class="navbar">
+                                <a href="#home">Home</a>
+                                <a href="#news">News</a>
+                                <div class="dropdown">
+                                    <button class="dropbtn">Dropdown
+                                        <i class="fa fa-caret-down"></i>
+                                    </button>
+                                    <div class="dropdown-content">
+                                        <a href="#">Link 1</a>
+                                        <a href="#">Link 2</a>
+                                        <a href="#">Link 3</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <script></script>
                     </li>
                     <li><h4>Dropdown in Sidenav</h4>
