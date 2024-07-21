@@ -2766,9 +2766,53 @@
                         </div>
                     </li>
                     <li><h4>Dropup</h4>
-                        <style id="olb-test-UK2024043-style"></style>
-                        <div id="olb-test-UK2024043"></div>
-                        <script></script>
+                        <style id="olb-test-UK2024043-style">
+                            #olb-test-UK2024043 .dropbtn {
+                                background-color: #3498DB;
+                                color: #fff;
+                                padding: 16px;
+                                font-size: 16px;
+                                border: none;
+                            }
+                            #olb-test-UK2024043 .dropup {
+                                position: relative;
+                                display: inline-block;
+                            }
+                            #olb-test-UK2024043 .dropup-content {
+                                display: none;
+                                position: absolute;
+                                bottom: 50px;
+                                background-color: #f1f1f1;
+                                min-width: 160px;
+                                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                                z-index: 1;
+                            }
+                            #olb-test-UK2024043 .dropup-content a {
+                                color: #000;
+                                padding: 12px 16px;
+                                text-decoration: none;
+                                display: block;
+                            }
+                            #olb-test-UK2024043 .dropup-content a:hover {
+                                background-color: #ddd;
+                            }
+                            #olb-test-UK2024043 .dropup:hover .dropup-content {
+                                display: block;
+                            }
+                            #olb-test-UK2024043 .dropup:hover .dropup {
+                                background-color: #2980B9;
+                            }
+                        </style>
+                        <div id="olb-test-UK2024043">
+                            <div class="dropup">
+                                <button class="dropbtn">Dropup</button>
+                                <div class="dropup-content">
+                                    <a href="#">Link 1</a>
+                                    <a href="#">Link 2</a>
+                                    <a href="#">Link 3</a>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                     <li><h4>Mega Menu</h4>
                         <style id="olb-test-UK2024044-style"></style>
