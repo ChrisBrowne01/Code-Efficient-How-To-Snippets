@@ -2918,12 +2918,143 @@
                                 </div>
                             </div>
                         </div>
-                        <script></script>
                     </li>
                     <li><h4>Mobile Menu</h4>
-                        <style id="olb-test-UK2024045-style"></style>
-                        <div id="olb-test-UK2024045"></div>
-                        <script></script>
+                        <style id="olb-test-UK2024045-style-vertical">
+                            #olb-test-UK2024045 > div {
+                                display: inline-block;
+
+                            }
+                            /* Vertical mobile navigation */
+                            #olb-test-UK2024045 .mob-vertical {
+                                background-color: #555;
+                                border-radius: 0 0 4px 4px;
+                                width: 45%;
+                            }
+                            #olb-test-UK2024045 .mob-vertical .topnav {
+                                overflow: hidden;
+                                background-color: #333;
+                                position: relative;
+                                display: grid; /* Remove on full screens */
+                            }
+                            #olb-test-UK2024045 .mob-vertical .topnav #myLinks {
+                                display: none;
+                            }
+                            #olb-test-UK2024045 .mob-vertical .topnav a {
+                                color: #fff;
+                                padding: 14px 16px;
+                                text-decoration: none;
+                                font-size: 17px;
+                                display: block;
+                            }
+                            #olb-test-UK2024045 .mob-vertical .topnav a.icon {
+                                background: #000;
+                                display: block;
+                                position: absolute;
+                                right: 0; /* right: 0; */
+                                /* top: 0; */
+                            }
+                            #olb-test-UK2024045 .mob-vertical .topnav a:hover {
+                                background-color: #ddd;
+                                color: #000;
+                            }
+                            #olb-test-UK2024045 .mob-vertical .active {
+                                background-color: #04AA6D;
+                                color: #fff;
+                            }
+                            #olb-test-UK2024045 .mob-vertical .main {
+                                color: #fff;
+                                padding: 12px;
+                            }
+                            /* Horizontial mobile navigation */
+                            #olb-test-UK2024045 .mob-horizontial {
+                                background-color: #555;
+                                border-radius: 0 0 4px 4px;
+                                width: 45%;
+                                margin: 2%;
+                            }
+                            #olb-test-UK2024045 .mob-horizontial .topnav {
+                                overflow: hidden;
+                                background-color: #333;
+                                position: relative;
+                            }
+                            #olb-test-UK2024045 .mob-horizontial .topnav #myLinks {
+                                display: none;
+                            }
+                            #olb-test-UK2024045 .mob-horizontial .topnav a {
+                                float: left;
+                                color: #fff;
+                                padding: 14px 12px;
+                                text-decoration: none;
+                                font-size: 17px;
+                            }
+                            #olb-test-UK2024045 .mob-horizontial .topnav a.icon {
+                                float: right;
+                            }
+                            #olb-test-UK2024045 .mob-horizontial .topnav a:hover {
+                                background-color: #ddd;
+                                color: #000;
+                            }
+                            #olb-test-UK2024045 .mob-horizontial .active {
+                                background-color: #04AA6D;
+                                color: #fff;
+                            }
+                            #olb-test-UK2024045 .mob-horizontial .main {
+                                color: #fff;
+                                padding: 12px;
+                            }    
+                        </style>
+                        <div id="olb-test-UK2024045">
+                            <div class="mob-vertical">
+                                <div class="topnav">
+                                    <a href="#home" class="active">Logo</a>
+                                    <div id="myLinks">
+                                        <a href="#news">News</a>
+                                        <a href="#contact">Contact</a>
+                                        <a href="#about">About</a>
+                                    </div>
+                                    <a class="icon">
+                                        <i class="fa fa-bars"></i>
+                                    </a>
+                                </div>
+                                <div class="main">
+                                    <h3>Vertical Mobile Navbar</h3>
+                                    <p>This example demonstrates how a navigation menu on a mobile/smart phone could look like.</p>
+                                    <p>Click on the hamburger menu (three bars) in the top right corner, to toggle the menu.</p>
+                                </div>
+                            </div>
+                            <div class="mob-horizontial">
+                                <div class="topnav">
+                                    <a href="#home" class="active">Logo</a>
+                                    <div id="myLinks">
+                                        <a href="#news">News</a>
+                                        <a href="#contact">Contact</a>
+                                        <a href="#about">About</a>
+                                    </div>
+                                    <a class="icon">
+                                        <i class="fa fa-bars"></i>
+                                    </a>
+                                </div>
+                                <div class="main">
+                                    <h3>Horizontal Mobile Navbar</h3>
+                                    <p>This example demonstrates how a navigation menu on a mobile/smart phone could look like.</p>
+                                    <p>Click on the hamburger menu (three bars) in the top right corner, to toggle the menu.</p>
+                                    <p><b>Note that this example should'nt be used if you have a lot of links, as they will "break" the navbar when there's too many (especially on very small screens).</b></p>
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                            const linksv = document.querySelector("#olb-test-UK2024045 .mob-vertical #myLinks");
+                            document.querySelector("#olb-test-UK2024045 .mob-vertical .icon").addEventListener("click", function() {
+                                (linksv.style.display === "block") ? linksv.style.display = "none" : linksv.style.display = "block";
+                            });
+                        </script>
+                        <script>
+                            const linksh = document.querySelector("#olb-test-UK2024045 .mob-horizontial #myLinks");
+                            document.querySelector("#olb-test-UK2024045 .mob-horizontial .icon").addEventListener("click", function() {
+                                (linksh.style.display === "block") ? linksh.style.display = "none" : linksh.style.display = "block";
+                            });
+                        </script>
                     </li>
                     <li><h4>Curtain Menu</h4>
                         <style id="olb-test-UK2024046-style"></style>
