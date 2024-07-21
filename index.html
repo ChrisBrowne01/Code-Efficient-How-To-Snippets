@@ -2559,6 +2559,9 @@
                     </li>
                     <li><h4>Resp Navbar Dropdown</h4>
                         <style id="olb-test-UK2024041-style">
+                            #olb-test-UK2024041 {
+                                height: 350px;
+                            }
                             #olb-test-UK2024041 .topnav {
                                 background-color: #333;
                                 overflow: hidden;
@@ -2678,9 +2681,89 @@
                         </script>
                     </li>
                     <li><h4>Subnavigation Menu</h4>
-                        <style id="olb-test-UK2024042-style"></style>
-                        <div id="olb-test-UK2024042"></div>
-                        <script></script>
+                        <style id="olb-test-UK2024042-style">
+                            #olb-test-UK2024042 .navbar {
+                                overflow: hidden;
+                                background-color: #333;
+                            }
+                            #olb-test-UK2024042 .navbar a {
+                                float: left;
+                                font-size: 16px;
+                                color: white;
+                                text-align: center;
+                                padding: 14px 16px;
+                                text-decoration: none;
+                            }
+                            #olb-test-UK2024042 .subnav {
+                                float: left;
+                                overflow: hidden;
+                            }
+                            #olb-test-UK2024042 .subnav .subnavbtn {
+                                font-size: 16px;
+                                border: none;
+                                outline: none;
+                                color: white;
+                                padding: 14px 16px;
+                                background-color: inherit;
+                                font-family: inherit;
+                                margin: 0;
+                            }
+                            #olb-test-UK2024042 .navbar a:hover, .subnav a:hover .subnavbtn {
+                                background-color: red;
+                            }
+                            #olb-test-UK2024042 .subnav-content {
+                                display: none;
+                                position: absolute;
+                                left: 90px; /* left: 0; */
+                                background-color: red;
+                                width: calc(100% - 100px); /* width: 100%; */
+                                z-index: 1;
+                            }
+                            #olb-test-UK2024042 .subnav-content a {
+                                float: left;
+                                color: white;
+                                text-decoration: none;
+                            }
+                            #olb-test-UK2024042 .subnav-content a:hover {
+                                background-color: #eee;
+                                color: black;
+                            }
+                            #olb-test-UK2024042 .subnav:hover .subnav-content {
+                                display: block;
+                            }
+                        </style>
+                        <div id="olb-test-UK2024042">
+                            <div class="navbar">
+                                <a href="#home">Home</a>
+                                <div class="subnav">
+                                    <button class="subnavbtn">About <i class="fa fa-caret-down"></i></button>
+                                    <div class="subnav-content">
+                                        <a href="#company">Company</a>
+                                        <a href="#team">Team</a>
+                                        <a href="#careers">Careers</a>
+                                    </div>
+                                </div>
+                                <div class="subnav">
+                                    <button class="subnavbtn">Services <i class="fa fa-caret-down"></i></button>
+                                    <div class="subnav-content">
+                                        <a href="#bring">Bring</a>
+                                        <a href="#deliver">Deliver</a>
+                                        <a href="#packages">Packages</a>
+                                        <a href="#express">Express</a>
+                                    </div>
+                                </div>
+                                <div class="subnav">
+                                    <button class="subnavbtn">Contact <i class="fa fa-caret-down"></i></button>
+                                    <div class="subnav-content">
+                                        <a href="#phone">Phone</a>
+                                        <a href="#email">Email</a>
+                                        <a href="#post">Post</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h2>Subnav/dropdown menu inside a Navigation Bar</h2>
+                            <p>Hover over the "about", "services" or "Contact" link to see the sub navigation menu.</p>
+                        </div>
                     </li>
                     <li><h4>Dropup</h4>
                         <style id="olb-test-UK2024043-style"></style>
