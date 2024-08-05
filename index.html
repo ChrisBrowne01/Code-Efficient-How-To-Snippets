@@ -2340,7 +2340,6 @@
                     </script>
                     </li>
                     <li><h4>Cascading Dropdown</h4>
-                        <style id="olb-test-UK2024038-style"></style>
                         <div id="olb-test-UK2024038">
                             <form name="form1" id="form1" action="action.php" method="POST">
                                 Subjects: <select name="subject" id="subject">
@@ -2400,39 +2399,662 @@
                         </script>
                     </li>
                     <li><h4>Dropdown in Topnav</h4>
-                        <style id="olb-test-UK2024039-style"></style>
-                        <div id="olb-test-UK2024039"></div>
-                        <script></script>
+                        <style id="olb-test-UK2024039-style">
+                            #olb-test-UK2024039 .navbar {
+                                overflow: hidden;
+                                background-color: #333;
+                                font-family: Arial;
+                            }
+                            #olb-test-UK2024039 .navbar a {
+                                float: left;
+                                font-size: 16px;
+                                color: white;
+                                text-align: center;
+                                padding: 14px 16px;
+                                text-decoration: none;
+                            }
+                            #olb-test-UK2024039 .dropdown {
+                                float: left;
+                                overflow: hidden;
+                            }
+                            #olb-test-UK2024039 .dropdown .dropbtn {
+                                font-size: 16px;
+                                border: none;
+                                outline: none;
+                                color: white;
+                                padding: 14px 16px;
+                                background-color: inherit;
+                                font-family: inherit;
+                                margin: 0;
+                            }
+                            #olb-test-UK2024039 .navbar a:hover, #olb-test-UK2024039 .dropdown:hover .dropbtn {
+                                background-color: red;
+                            }
+                            #olb-test-UK2024039 .dropdown-content {
+                                display: none;
+                                position: absolute;
+                                background-color: #f9f9f9;
+                                min-width: 160px;
+                                box-shadow: 0px 8px 16px 0px rgba(0,0,0, 0.2);
+                                z-index: 1;
+                            }
+                            #olb-test-UK2024039 .dropdown-content a {
+                                float: none;
+                                color: #000;
+                                padding: 12px 16px;
+                                text-decoration: none;
+                                display: block;
+                                text-align: left;
+                            }
+                            #olb-test-UK2024039 .dropdown-content a:hover {
+                                background-color: #ddd;
+                            }
+                            #olb-test-UK2024039 .dropdown:hover .dropdown-content {
+                                display: block;
+                            }
+                        </style>
+                        <div id="olb-test-UK2024039">
+                            <div class="navbar">
+                                <a href="#home">Home</a>
+                                <a href="#news">News</a>
+                                <div class="dropdown">
+                                    <button class="dropbtn">Dropdown
+                                        <i class="fa fa-caret-down"></i>
+                                    </button>
+                                    <div class="dropdown-content">
+                                        <a href="#">Link 1</a>
+                                        <a href="#">Link 2</a>
+                                        <a href="#">Link 3</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                     <li><h4>Dropdown in Sidenav</h4>
-                        <style id="olb-test-UK2024040-style"></style>
-                        <div id="olb-test-UK2024040"></div>
-                        <script></script>
+                        <style id="olb-test-UK2024040-style">
+                            #olb-test-UK2024040 .sidenav {
+                                /* height: 100%; */
+                                width: 200px;
+                                position: absolute; /* position: fixed; */
+                                z-index: 1;
+                                /* top: 0;
+                                left: 0; */
+                                background-color: #111;
+                                overflow-x: hidden;
+                                padding-top: 20px;
+                            }
+                            #olb-test-UK2024040 .sidenav a, #olb-test-UK2024040 .dropdown-btn {
+                                padding: 6px 8px 6px 16px;
+                                text-decoration: none;
+                                font-size: 20px;
+                                color: #818181;
+                                display: block;
+                                border: none;
+                                background: none;
+                                width: 100%;
+                                text-align: left;
+                                cursor: pointer;
+                                outline: none;
+                            }
+                            #olb-test-UK2024040 .sidenav a:hover, #olb-test-UK2024040 .dropdown-btn:hover {
+                                color: #f1f1f1;
+                            }
+                            #olb-test-UK2024040 .main {
+                                position:inherits;
+                                margin-left: 200px;
+                                font-size: 20px;
+                                padding: 0px 10px;
+                            }
+                            #olb-test-UK2024040 .active {
+                                background-color: green;
+                                color: white;
+                            }
+                            #olb-test-UK2024040 .dropdown-container {
+                                display: none;
+                                background-color: #262626;
+                                padding-left: 8px;
+                            }
+                            #olb-test-UK2024040 .fa-caret-down {
+                                float: right;
+                                padding-right: 8px;
+                            }
+                            @media screen and (max-height: 450px) {
+                                #olb-test-UK2024040 .sidenav {padding-top: 15px;}
+                                #olb-test-UK2024040 .sidenav a {font-size: 18px;}
+                            }
+                        </style>
+                        <div id="olb-test-UK2024040">
+                            <div class="sidenav">
+                                <a href="#about">About</a>
+                                <a href="#services">Services</a>
+                                <a href="#Clients">Clients</a>
+                                <a href="#Contact">Contact</a>
+                                <button class="dropdown-btn">Dropdown
+                                    <i class="fa fa-caret-down"></i>
+                                </button>
+                                <div class="dropdown-container">
+                                    <a href="#">Link 1</a>
+                                    <a href="#">Link 2</a>
+                                    <a href="#">Link 3</a>
+                                </div>
+                                <a href="#contact">Search</a>
+                            </div>
+                            <div class="main">
+                                <h2>Sidebar Dropdown</h2>
+                                <p>Click on the dropdown button to open the dropdown menu inside the side navigation.</p>
+                                <p>This sidebar is of full height (100%) and always shown.</p>
+                                <p>Some random text..</p>
+                            </div>
+                        </div>
+                        <script>
+                            const dropdown = document.querySelectorAll(".dropdown-btn");
+                            dropdown.forEach(link => {
+                                link.addEventListener("click", function() {
+                                    this.classList.toggle("active");
+                                    let dropdownContent = this.nextElementSibling;
+                                    (dropdownContent.style.display === "block") ? dropdownContent.style.display = "none" : dropdownContent.style.display = "block";
+                                });                              
+                            });
+                        </script>
                     </li>
                     <li><h4>Resp Navbar Dropdown</h4>
-                        <style id="olb-test-UK2024041-style"></style>
-                        <div id="olb-test-UK2024041"></div>
-                        <script></script>
+                        <style id="olb-test-UK2024041-style">
+                            #olb-test-UK2024041 {
+                                height: 350px;
+                            }
+                            #olb-test-UK2024041 .topnav {
+                                background-color: #333;
+                                overflow: hidden;
+                            }
+                            #olb-test-UK2024041 .topnav a {
+                                float: left;
+                                display: block;
+                                color: #f2f2f2;
+                                text-align: center;
+                                padding: 14px 16px;
+                                text-decoration: none;
+                                font-size: 17px;
+                            }
+
+                            #olb-test-UK2024041 .active {
+                                background-color: #04AA6D;
+                                color: white;
+                            }
+                            #olb-test-UK2024041 .topnav .icon {
+                                display: none;
+                            }
+                            #olb-test-UK2024041 .dropdown {
+                                float: left;
+                                overflow: hidden;
+                            }
+                            #olb-test-UK2024041 .dropdown .dropbtn {
+                                font-size: 17px;
+                                border: none;
+                                outline: none;
+                                color: white;
+                                padding: 14px 16px;
+                                background-color: inherit;
+                                font-family: inherit;
+                                margin: 0;
+                            }
+                            #olb-test-UK2024041 .dropdown-content {
+                                display: none;
+                                position: absolute;
+                                background-color: #f9f9f9;
+                                min-width: 160px;
+                                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                                z-index: 1;
+                            }
+                            #olb-test-UK2024041 .dropdown-content a {
+                                float: none;
+                                color: black;
+                                padding: 12px 16px;
+                                text-decoration: none;
+                                display: block;
+                                text-align: left;
+                            }
+                            #olb-test-UK2024041 .topnav a:hover, .dropdown:hover .dropbtn {
+                                background-color: #555;
+                                color: white;
+                            }
+                            #olb-test-UK2024041 .dropdown-content a:hover {
+                                background-color: #ddd;
+                                color: black;
+                            }
+                            #olb-test-UK2024041 .dropdown:hover .dropdown-content {
+                                display: block;
+                            }
+
+                            @media screen and (max-width: 600px) {
+                                #olb-test-UK2024041 .topnav a:not(:first-child), .dropdown .dropbtn {
+                                    display: none;
+                                }
+                                #olb-test-UK2024041 .topnav a.icon {
+                                    float: right;
+                                    display: block;
+                                }
+                            }
+
+                            @media screen and (max-width: 600px) {
+                                #olb-test-UK2024041 .topnav.responsive {position: relative;}
+                                #olb-test-UK2024041 .topnav.responsive a.icon {
+                                    position: absolute;
+                                    right: 0;
+                                    top: 0;
+                                }
+                                #olb-test-UK2024041 .topnav.responsive a {
+                                    float: none;
+                                    display: block;
+                                    text-align: left;
+                                }
+                                #olb-test-UK2024041 .topnav.responsive .dropdown {float: none;}
+                                #olb-test-UK2024041 .topnav.responsive .dropdown-content {position: relative;}
+                                #olb-test-UK2024041 .topnav.responsive .dropdown .dropbtn {
+                                    display: block;
+                                    width: 100%;
+                                    text-align: left;
+                                }
+                            }
+                        </style>
+                        <div id="olb-test-UK2024041">
+                            <div class="topnav" id="myTopnav">
+                                <a href="#home" class="active">Home</a>
+                                <a href="#news">News</a>
+                                <a href="#contact">Contact</a>
+                                <div class="dropdown">
+                                  <button class="dropbtn">Dropdown
+                                    <i class="fa fa-caret-down"></i>
+                                  </button>
+                                  <div class="dropdown-content">
+                                    <a href="#">Link 1</a>
+                                    <a href="#">Link 2</a>
+                                    <a href="#">Link 3</a>
+                                  </div>
+                                </div>
+                                <a href="#about">About</a>
+                                <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+                            </div>
+                        </div>
+                        <script>
+                            const topNav = document.querySelector("#olb-test-UK2024041 #myTopnav");
+                            (topNav.classList.contains("topnav")) ? topNav.classList.add("responsive") : topNav.classList.remove("responsive");
+                        </script>
                     </li>
                     <li><h4>Subnavigation Menu</h4>
-                        <style id="olb-test-UK2024042-style"></style>
-                        <div id="olb-test-UK2024042"></div>
-                        <script></script>
+                        <style id="olb-test-UK2024042-style">
+                            #olb-test-UK2024042 .navbar {
+                                overflow: hidden;
+                                background-color: #333;
+                            }
+                            #olb-test-UK2024042 .navbar a {
+                                float: left;
+                                font-size: 16px;
+                                color: white;
+                                text-align: center;
+                                padding: 14px 16px;
+                                text-decoration: none;
+                            }
+                            #olb-test-UK2024042 .subnav {
+                                float: left;
+                                overflow: hidden;
+                            }
+                            #olb-test-UK2024042 .subnav .subnavbtn {
+                                font-size: 16px;
+                                border: none;
+                                outline: none;
+                                color: white;
+                                padding: 14px 16px;
+                                background-color: inherit;
+                                font-family: inherit;
+                                margin: 0;
+                            }
+                            #olb-test-UK2024042 .navbar a:hover, .subnav a:hover .subnavbtn {
+                                background-color: red;
+                            }
+                            #olb-test-UK2024042 .subnav-content {
+                                display: none;
+                                position: absolute;
+                                left: 90px; /* left: 0; */
+                                background-color: red;
+                                width: calc(100% - 100px); /* width: 100%; */
+                                z-index: 1;
+                            }
+                            #olb-test-UK2024042 .subnav-content a {
+                                float: left;
+                                color: white;
+                                text-decoration: none;
+                            }
+                            #olb-test-UK2024042 .subnav-content a:hover {
+                                background-color: #eee;
+                                color: black;
+                            }
+                            #olb-test-UK2024042 .subnav:hover .subnav-content {
+                                display: block;
+                            }
+                        </style>
+                        <div id="olb-test-UK2024042">
+                            <div class="navbar">
+                                <a href="#home">Home</a>
+                                <div class="subnav">
+                                    <button class="subnavbtn">About <i class="fa fa-caret-down"></i></button>
+                                    <div class="subnav-content">
+                                        <a href="#company">Company</a>
+                                        <a href="#team">Team</a>
+                                        <a href="#careers">Careers</a>
+                                    </div>
+                                </div>
+                                <div class="subnav">
+                                    <button class="subnavbtn">Services <i class="fa fa-caret-down"></i></button>
+                                    <div class="subnav-content">
+                                        <a href="#bring">Bring</a>
+                                        <a href="#deliver">Deliver</a>
+                                        <a href="#packages">Packages</a>
+                                        <a href="#express">Express</a>
+                                    </div>
+                                </div>
+                                <div class="subnav">
+                                    <button class="subnavbtn">Contact <i class="fa fa-caret-down"></i></button>
+                                    <div class="subnav-content">
+                                        <a href="#phone">Phone</a>
+                                        <a href="#email">Email</a>
+                                        <a href="#post">Post</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h2>Subnav/dropdown menu inside a Navigation Bar</h2>
+                            <p>Hover over the "about", "services" or "Contact" link to see the sub navigation menu.</p>
+                        </div>
                     </li>
                     <li><h4>Dropup</h4>
-                        <style id="olb-test-UK2024043-style"></style>
-                        <div id="olb-test-UK2024043"></div>
-                        <script></script>
+                        <style id="olb-test-UK2024043-style">
+                            #olb-test-UK2024043 .dropbtn {
+                                background-color: #3498DB;
+                                color: #fff;
+                                padding: 16px;
+                                font-size: 16px;
+                                border: none;
+                            }
+                            #olb-test-UK2024043 .dropup {
+                                position: relative;
+                                display: inline-block;
+                            }
+                            #olb-test-UK2024043 .dropup-content {
+                                display: none;
+                                position: absolute;
+                                bottom: 50px;
+                                background-color: #f1f1f1;
+                                min-width: 160px;
+                                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                                z-index: 1;
+                            }
+                            #olb-test-UK2024043 .dropup-content a {
+                                color: #000;
+                                padding: 12px 16px;
+                                text-decoration: none;
+                                display: block;
+                            }
+                            #olb-test-UK2024043 .dropup-content a:hover {
+                                background-color: #ddd;
+                            }
+                            #olb-test-UK2024043 .dropup:hover .dropup-content {
+                                display: block;
+                            }
+                            #olb-test-UK2024043 .dropup:hover .dropup {
+                                background-color: #2980B9;
+                            }
+                        </style>
+                        <div id="olb-test-UK2024043">
+                            <div class="dropup">
+                                <button class="dropbtn">Dropup</button>
+                                <div class="dropup-content">
+                                    <a href="#">Link 1</a>
+                                    <a href="#">Link 2</a>
+                                    <a href="#">Link 3</a>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                     <li><h4>Mega Menu</h4>
-                        <style id="olb-test-UK2024044-style"></style>
-                        <div id="olb-test-UK2024044"></div>
-                        <script></script>
+                        <style id="olb-test-UK2024044-style">
+                            #olb-test-UK2024044 .navbar {
+                                overflow: hidden;
+                                background-color: #333;
+                                font-family: Arial;
+                            }
+                            #olb-test-UK2024044 .navbar a {
+                                float: left;
+                                font-size: 16px;
+                                text-decoration: none;
+                                text-align: center;
+                                color: #fff;
+                                padding: 14px 16px;
+                            }
+                            #olb-test-UK2024044 .dropdown .dropbtn {
+                                color: white;
+                                font-size: 16px;
+                                border: none;
+                                outline: none;
+                                padding: 14px 16px;
+                                background-color: inherit;
+                                font: inherit;
+                                margin: 0;
+                            }
+                            #olb-test-UK2024044 .dropdown .dropbtn:hover, #olb-test-UK2024044 .navbar a:hover, #olb-test-UK2024044 h1 {
+                                background-color: red;
+                                color: white;
+                                display: block;
+                            }
+                            #olb-test-UK2024044 h1 {
+                                padding: 32px 16px;
+                                margin-block: 0;
+                            }
+                            #olb-test-UK2024044 h2 {
+                                padding-left: 10px;
+                            }
+                            #olb-test-UK2024044 .dropdown-content {
+                                display: none;
+                            }
+                            #olb-test-UK2024044 .dropbtn:hover + .dropdown-content, #olb-test-UK2024044 .dropdown-content:hover {
+                                background-color: #818181;
+                                display: block;
+                            }
+                            #olb-test-UK2024044 .row {
+                                background-color: #ccc;
+                                padding: 5px;
+                            }
+                            #olb-test-UK2024044 .column {
+                                float: left;
+                                width: 33.33%;      
+                                background-color: #ccc;
+                                height: 250px;
+                            }
+                            #olb-test-UK2024044 .column a {
+                                float: none;
+                                color: black;
+                                padding: 16px;
+                                text-decoration: none;
+                                display: block;
+                                text-align: left;
+                            }
+                            #olb-test-UK2024044 .column a:hover {
+                                background-color: #ddd;
+                                color: #000;
+                            }
+                            #olb-test-UK2024044 .row::after {
+                                content: "";
+                                display: table;
+                                clear: both;
+                            }
+                        </style>
+                        <div id="olb-test-UK2024044">
+                            <div class="navbar">
+                                <a href="#home">Home</a>
+                                <a href="#news">News</a>
+                                <div class="dropdown">
+                                    <button class="dropbtn">Dropdown <i class="fa fa-caret-down"></i></button>
+                                    <div class="dropdown-content">
+                                        <h1>Mega Menu</h1>
+                                        <div class="row">
+                                            <div class="column">
+                                                <h2>Shoes</h2>
+                                                <a href="#">Boots</a>
+                                                <a href="#">Pumps</a>
+                                                <a href="#">Heels</a>
+                                            </div>
+                                            <div class="column">
+                                                <h2>Bottoms</h2>
+                                                <a href="#">Trousers</a>
+                                                <a href="#">Shorts</a>
+                                                <a href="#">Skirts</a>
+                                            </div>
+                                            <div class="column">
+                                                <h2>Tops</h2>
+                                                <a href="#">T-shirts</a>
+                                                <a href="#">Blouses</a>
+                                                <a href="#">Cardigans</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                     <li><h4>Mobile Menu</h4>
-                        <style id="olb-test-UK2024045-style"></style>
-                        <div id="olb-test-UK2024045"></div>
-                        <script></script>
+                        <style id="olb-test-UK2024045-style-vertical">
+                            #olb-test-UK2024045 > div {
+                                display: inline-block;
+
+                            }
+                            /* Vertical mobile navigation */
+                            #olb-test-UK2024045 .mob-vertical {
+                                background-color: #555;
+                                border-radius: 0 0 4px 4px;
+                                width: 45%;
+                            }
+                            #olb-test-UK2024045 .mob-vertical .topnav {
+                                overflow: hidden;
+                                background-color: #333;
+                                position: relative;
+                                display: grid; /* Remove on full screens */
+                            }
+                            #olb-test-UK2024045 .mob-vertical .topnav #myLinks {
+                                display: none;
+                            }
+                            #olb-test-UK2024045 .mob-vertical .topnav a {
+                                color: #fff;
+                                padding: 14px 16px;
+                                text-decoration: none;
+                                font-size: 17px;
+                                display: block;
+                            }
+                            #olb-test-UK2024045 .mob-vertical .topnav a.icon {
+                                background: #000;
+                                display: block;
+                                position: absolute;
+                                right: 0; /* right: 0; */
+                                /* top: 0; */
+                            }
+                            #olb-test-UK2024045 .mob-vertical .topnav a:hover {
+                                background-color: #ddd;
+                                color: #000;
+                            }
+                            #olb-test-UK2024045 .mob-vertical .active {
+                                background-color: #04AA6D;
+                                color: #fff;
+                            }
+                            #olb-test-UK2024045 .mob-vertical .main {
+                                color: #fff;
+                                padding: 12px;
+                            }
+                            /* Horizontial mobile navigation */
+                            #olb-test-UK2024045 .mob-horizontial {
+                                background-color: #555;
+                                border-radius: 0 0 4px 4px;
+                                width: 45%;
+                                margin: 2%;
+                            }
+                            #olb-test-UK2024045 .mob-horizontial .topnav {
+                                overflow: hidden;
+                                background-color: #333;
+                                position: relative;
+                            }
+                            #olb-test-UK2024045 .mob-horizontial .topnav #myLinks {
+                                display: none;
+                            }
+                            #olb-test-UK2024045 .mob-horizontial .topnav a {
+                                float: left;
+                                color: #fff;
+                                padding: 14px 12px;
+                                text-decoration: none;
+                                font-size: 17px;
+                            }
+                            #olb-test-UK2024045 .mob-horizontial .topnav a.icon {
+                                float: right;
+                            }
+                            #olb-test-UK2024045 .mob-horizontial .topnav a:hover {
+                                background-color: #ddd;
+                                color: #000;
+                            }
+                            #olb-test-UK2024045 .mob-horizontial .active {
+                                background-color: #04AA6D;
+                                color: #fff;
+                            }
+                            #olb-test-UK2024045 .mob-horizontial .main {
+                                color: #fff;
+                                padding: 12px;
+                            }    
+                        </style>
+                        <div id="olb-test-UK2024045">
+                            <div class="mob-vertical">
+                                <div class="topnav">
+                                    <a href="#home" class="active">Logo</a>
+                                    <div id="myLinks">
+                                        <a href="#news">News</a>
+                                        <a href="#contact">Contact</a>
+                                        <a href="#about">About</a>
+                                    </div>
+                                    <a class="icon">
+                                        <i class="fa fa-bars"></i>
+                                    </a>
+                                </div>
+                                <div class="main">
+                                    <h3>Vertical Mobile Navbar</h3>
+                                    <p>This example demonstrates how a navigation menu on a mobile/smart phone could look like.</p>
+                                    <p>Click on the hamburger menu (three bars) in the top right corner, to toggle the menu.</p>
+                                </div>
+                            </div>
+                            <div class="mob-horizontial">
+                                <div class="topnav">
+                                    <a href="#home" class="active">Logo</a>
+                                    <div id="myLinks">
+                                        <a href="#news">News</a>
+                                        <a href="#contact">Contact</a>
+                                        <a href="#about">About</a>
+                                    </div>
+                                    <a class="icon">
+                                        <i class="fa fa-bars"></i>
+                                    </a>
+                                </div>
+                                <div class="main">
+                                    <h3>Horizontal Mobile Navbar</h3>
+                                    <p>This example demonstrates how a navigation menu on a mobile/smart phone could look like.</p>
+                                    <p>Click on the hamburger menu (three bars) in the top right corner, to toggle the menu.</p>
+                                    <p><b>Note that this example should'nt be used if you have a lot of links, as they will "break" the navbar when there's too many (especially on very small screens).</b></p>
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                            const linksv = document.querySelector("#olb-test-UK2024045 .mob-vertical #myLinks");
+                            document.querySelector("#olb-test-UK2024045 .mob-vertical .icon").addEventListener("click", function() {
+                                (linksv.style.display === "block") ? linksv.style.display = "none" : linksv.style.display = "block";
+                            });
+                        </script>
+                        <script>
+                            const linksh = document.querySelector("#olb-test-UK2024045 .mob-horizontial #myLinks");
+                            document.querySelector("#olb-test-UK2024045 .mob-horizontial .icon").addEventListener("click", function() {
+                                (linksh.style.display === "block") ? linksh.style.display = "none" : linksh.style.display = "block";
+                            });
+                        </script>
                     </li>
                     <li><h4>Curtain Menu</h4>
                         <style id="olb-test-UK2024046-style"></style>
