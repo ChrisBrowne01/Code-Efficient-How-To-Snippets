@@ -1099,7 +1099,7 @@
                         <script>
                             /* Sidenav Overlay */
                             const sideNav = document.querySelector("#olb-test-UK2024016 #mySidenav");
-                            const main = document.querySelector("body:not(#olb-test-UK2024016)")
+                            const main = document.querySelector("body:not(#olb-test-UK2024016)");
                             document.addEventListener('click', (event) => {
                                 /* merges multiple `addEventListener` together using event.taget.matches("#selector") */
                                 if (event.target.matches("#olb-test-UK2024016a button")) {
@@ -3057,9 +3057,139 @@
                         </script>
                     </li>
                     <li><h4>Curtain Menu</h4>
-                        <style id="olb-test-UK2024046-style"></style>
-                        <div id="olb-test-UK2024046"></div>
-                        <script></script>
+                        <style id="olb-test-UK2024046-style">
+                            /* Styling & layout for all three mobile buttons displayed */
+                            #olb-test-UK2024046 .col {
+                                display: inline-block;
+                                margin: 13px 2%;
+                            }
+                            #olb-test-UK2024046 .col .btn {
+                                padding: 12px;
+                                border-radius: 4px;
+                                font-size: 30px;
+                                cursor: pointer;
+                            }
+                            #olb-test-UK2024046 .col .btn:hover {
+                                background-color: rgba(85, 85, 85, 0.2);
+                            }
+                            /* General overlay styling */
+                            #olb-test-UK2024046 .overlay {
+                                height: 0;
+                                width: 0;
+                                position: fixed;
+                                z-index: 1;
+                                left: 0;
+                                top: 0;
+                                background-color: rgba(0, 0, 0, 0.9);
+                                overflow: hidden;
+                                transition: 0.5s;
+                            }
+                            /* Slide Right */
+                            #olb-test-UK2024046 #myNavRt { height: 100%; width: 0; transition: width 0.5s; }
+                            /* Slide Down */
+                            #olb-test-UK2024046 #myNavDn { height: 0; width: 100%; transition: height 0.5s; }
+                            /* No Animation */
+                            #olb-test-UK2024046 #myNavNoAn { height: 100%; width: 100%; display: none; transition: none; }
+                            
+                            #olb-test-UK2024046 .overlay-content {
+                                position: relative;
+                                top: 25%;
+                                width: 100%;
+                                text-align: center;
+                                margin-top: 30px;
+                            }
+                            #olb-test-UK2024046 .overlay a {
+                                padding: 8px;
+                                text-decoration: none;
+                                font-size: 36px;
+                                color: #818181;
+                                display: block;
+                                transition: 0.3s; 
+                            }
+                            #olb-test-UK2024046 .overlay a:hover, #olb-test-UK2024046 .overlay a:focus {
+                                color: #f1f1f1;
+                            }
+                            #olb-test-UK2024046 .overlay .closebtn {
+                                position: absolute;
+                                top: 20px;
+                                right: 45px;
+                                font-size: 60px;
+                            }
+                            @media sceen and (max-height: 450px) {
+                                #olb-test-UK2024046 .overlay a {font-size: 20px;}
+                                #olb-test-UK2024046 .overlay .closebtn {
+                                    font-size: 40px;
+                                    top: 15px;
+                                    right: 35px;
+                                }
+                            }
+                        </style>
+                        <div id="olb-test-UK2024046">
+                            <div id="myNavRt" class="overlay">
+                                <a href="#olb-test-UK2024046" class="closebtn">&times;</a>
+
+                                <div class="overlay-content">
+                                    <a href="#">About</a>
+                                    <a href="#">Services</a>
+                                    <a href="#">Clients</a>
+                                    <a href="#">Contact</a>
+                                </div>
+                            </div>
+                            <div id="myNavDn" class="overlay">
+                                <a href="#olb-test-UK2024046" class="closebtn">&times;</a>
+
+                                <div class="overlay-content">
+                                    <a href="#">About</a>
+                                    <a href="#">Services</a>
+                                    <a href="#">Clients</a>
+                                    <a href="#">Contact</a>
+                                </div>
+                            </div>
+                            <div id="myNavNoAn" class="overlay">
+                                <a href="#olb-test-UK2024046" class="closebtn">&times;</a>
+
+                                <div class="overlay-content">
+                                    <a href="#">About</a>
+                                    <a href="#">Services</a>
+                                    <a href="#">Clients</a>
+                                    <a href="#">Contact</a>
+                                </div>
+                            </div>
+                            <p>Click on the buttons below to see how they open the fullscreen overlay navigtion menu:</p>
+                            <div class="col">
+                                <span class="btn" id="slideRight">&#9776; Slide Right</span>
+                            </div>
+                            <div class="col">
+                                <span class="btn" id="slideDown">&#9776; Slide Down</span>
+                            </div>
+                            <div class="col">
+                                <span class="btn" id="noAnimation">&#9776; No Animation</span>
+                            </div>
+                        </div>
+                        <script>
+                            /* Slide Right */
+                            document.addEventListener("click", (event) => {
+                                const myNavRt = document.querySelector("#myNavRt");
+                                if (event.target.matches("#olb-test-UK2024046 #slideRight")) myNavRt.style.width = "100%";
+                                else if (event.target.matches("#olb-test-UK2024046 #myNavRt.overlay .closebtn")) myNavRt.style.width = "0%";
+                            });
+                        </script>
+                        <script>
+                            /* Slide Down */
+                            document.addEventListener("click", (event) => {
+                                const myNavDn = document.querySelector("#myNavDn");
+                                if (event.target.matches("#olb-test-UK2024046 #slideDown")) myNavDn.style.height = "100%";
+                                else if (event.target.matches("#olb-test-UK2024046 #myNavDn.overlay .closebtn")) myNavDn.style.height = "0%";
+                            });
+                        </script>
+                        <script>
+                            /* Slide No Animation */
+                            document.addEventListener("click", (event) => {
+                                const myNavNo = document.querySelector("#myNavNoAn");
+                                if (event.target.matches("#olb-test-UK2024046 #noAnimation")) myNavNo.style.display = "block";
+                                if (event.target.matches("#olb-test-UK2024046 #myNavNoAn.overlay .closebtn")) myNavNo.style.display = "none";
+                            });
+                        </script>
                     </li>
                     <li><h4>Collapsed Sidebar</h4>
                         <style id="olb-test-UK2024047-style"></style>
