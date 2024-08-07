@@ -3374,8 +3374,43 @@
                         </div>
                     </li>
                     <li><h4>Breadcrumbs</h4>
-                        <style id="olb-test-UK2024050-style"></style>
-                        <div id="olb-test-UK2024050"></div>
+                        <style id="olb-test-UK2024050-style">
+                            #olb-test-UK2024050 ul.breadcrumb {
+                                padding: 10px 16px;
+                                list-style: none;
+                                background-color: #eee;
+                            }
+                            #olb-test-UK2024050 ul.breadcrumb li {
+                                display: inline;
+                                font-size: 18px;
+                            }
+                            #olb-test-UK2024050 ul.breadcrumb li+li:before {
+                                padding: 8px;
+                                color: black;
+                                content: "/\00a0";
+                            }
+                            #olb-test-UK2024050 ul.breadcrumb li:not(:last-of-type) a {
+                                color: #0275d8;
+                                text-decoration: none;
+                            }
+                            #olb-test-UK2024050 ul.breadcrumb li:not(:last-of-type) a:hover {
+                                color: #01447e;
+                                text-decoration: underline;
+                            }
+                            #olb-test-UK2024050 ul.breadcrumb li:last-of-type a {
+                                color: black;
+                                text-decoration: none;
+                                cursor: text;
+                            }
+                        </style>
+                        <div id="olb-test-UK2024050">
+                            <ul class="breadcrumb">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Pictures</a></li>
+                                <li><a href="#">Summer 15</a></li>
+                                <li><a href="#">Italy</a></li>
+                            </ul>
+                        </div>
                         <script></script>
                     </li>
                     <li><h4>Button Group</h4>
