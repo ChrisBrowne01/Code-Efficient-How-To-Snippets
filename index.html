@@ -3194,9 +3194,86 @@
                         </script>
                     </li>
                     <li><h4>Collapsed Sidebar</h4>
-                        <style id="olb-test-UK2024047-style"></style>
-                        <div id="olb-test-UK2024047"></div>
-                        <script></script>
+                        <style id="olb-test-UK2024047-style">
+                            #olb-test-UK2024047 .sidebar {
+                                height: 100%;
+                                width: 0;
+                                position: fixed;
+                                z-index: 1;
+                                top: 0;
+                                left: 0;
+                                background-color: #111;
+                                overflow-x: hidden;
+                                padding-top: 60px;
+                                transition: 0.5s;
+                            }
+                            #olb-test-UK2024047 .sidebar a, #olb-test-UK2024047 .sidebar span {
+                                padding: 8px 8px 8px 32px;
+                                text-decoration: none;
+                                font-size: 25px;
+                                color: #818181;
+                                display: block;
+                                transition: 0.3s;
+                            }
+                            #olb-test-UK2024047 .sidebar a:hover, #olb-test-UK2024047 .sidebar span:hover {
+                                color: #f1f1f1;
+                                cursor: pointer;
+                            }
+                            #olb-test-UK2024047 .sidebar .closebtn {
+                                position: absolute;
+                                top: 0;
+                                right: 25px;
+                                font-size: 36px;
+                                margin-left: 50px;
+                            }
+                            #olb-test-UK2024047 .openbtn {
+                                font-size: 20px;
+                                cursor: pointer;
+                                background-color: #111;
+                                color: white;
+                                padding: 10px 15px;
+                                border: none;
+                            }
+                            #olb-test-UK2024047 .openbtn {
+                                background-color: #444;
+                            }
+                            #olb-test-UK2024047 #main {
+                                transition: margin-left .5s;
+                                padding: 20px;
+                            }
+                            @media screen and (max-height: 450px) {
+                                #olb-test-UK2024047 .sidebar {padding-top: 15px;}
+                                #olb-test-UK2024047 .sidebar a, #olb-test-UK2024047 .sidebar span {font-size: 18px;}
+                            }
+                        </style>
+                        <div id="olb-test-UK2024047">
+                            <div id="mySlidebar" class="sidebar">
+                                <span class="closebtn">&times;</span>
+                                <a href="#olb-test-UK2024047">About</a>
+                                <a href="#olb-test-UK2024047">Services</a>
+                                <a href="#olb-test-UK2024047">Clients</a>
+                                <a href="#olb-test-UK2024047">Contact</a>
+                            </div>
+                            <div id="main">
+                                <button class="openbtn">&#9776; Open Slidebar</button>
+                                <h2>Collapsed Slidebar</h2>
+                                <p>Content...</p>
+                            </div>
+                        </div>
+                        <script>
+                            document.addEventListener("click", (event) => {
+                                const targetId = event.target.matches("#olb-test-UK2024047 #main .openbtn");
+                                const closebtn = event.target.matches("#olb-test-UK2024047 #mySlidebar .closebtn");
+                                const sidebar = document.querySelector("#olb-test-UK2024047 #mySlidebar")
+                                if (targetId) {
+                                    sidebar.style.width = "250px";
+                                    targetId.parentElement.style.marginLeft = "250px";
+                                } else if (closebtn) {
+                                    sidebar.style.width = "0";
+                                    targetId.parentElement.style.marginLeft = "0";
+                                }
+                            });
+                        </script>
                     </li>
                     <li><h4>Collapsed Sidepanel</h4>
                         <style id="olb-test-UK2024048-style"></style>
