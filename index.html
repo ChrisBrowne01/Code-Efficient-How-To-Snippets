@@ -3157,38 +3157,40 @@
                             </div>
                             <p>Click on the buttons below to see how they open the fullscreen overlay navigtion menu:</p>
                             <div class="col">
-                                <span class="btn" id="slideRight">&#9776; Slide Right</span>
+                                <span class="btn" target-id="myNavRt">&#9776; Slide Right</span>
                             </div>
                             <div class="col">
-                                <span class="btn" id="slideDown">&#9776; Slide Down</span>
+                                <span class="btn" target-id="myNavDn">&#9776; Slide Down</span>
                             </div>
                             <div class="col">
-                                <span class="btn" id="noAnimation">&#9776; No Animation</span>
+                                <span class="btn" target-id="myNavNoAn">&#9776; No Animation</span>
                             </div>
                         </div>
                         <script>
                             /* Slide Right */
                             document.addEventListener("click", (event) => {
-                                const myNavRt = document.querySelector("#myNavRt");
-                                if (event.target.matches("#olb-test-UK2024046 #slideRight")) myNavRt.style.width = "100%";
-                                else if (event.target.matches("#olb-test-UK2024046 #myNavRt.overlay .closebtn")) myNavRt.style.width = "0%";
-                            });
-                        </script>
-                        <script>
-                            /* Slide Down */
-                            document.addEventListener("click", (event) => {
-                                const myNavDn = document.querySelector("#myNavDn");
-                                if (event.target.matches("#olb-test-UK2024046 #slideDown")) myNavDn.style.height = "100%";
-                                else if (event.target.matches("#olb-test-UK2024046 #myNavDn.overlay .closebtn")) myNavDn.style.height = "0%";
+                                const targetId = event.target.getAttribute("target-id");
+                                const closebtn = event.target.matches("#olb-test-UK2024046 .overlay .closebtn");
+                                const overlay = document.querySelector(`#olb-test-UK2024046 #${targetId}.overlay`);
+                                if (overlay) {
+                                    if (targetId === "myNavRt") overlay.style.width = "100%";
+                                    else if (targetId === "myNavDn") overlay.style.height = "100%";
+                                    else if (targetId === "myNavNoAn") overlay.style.display = "block";
+                                } else if (closebtn) {
+                                    /* target's close button, so parentElement is need to target overlay's css */
+                                    event.target.parentElement.style.width = event.target.parentElement.style.height = "0%";
+                                    event.target.parentElement.display = "none";
+                                }
                             });
                         </script>
                         <script>
                             /* Slide No Animation */
-                            document.addEventListener("click", (event) => {
+                            /* How to display a single curtian menu code efficently */
+                            /* document.addEventListener("click", (event) => {
                                 const myNavNo = document.querySelector("#myNavNoAn");
                                 if (event.target.matches("#olb-test-UK2024046 #noAnimation")) myNavNo.style.display = "block";
-                                if (event.target.matches("#olb-test-UK2024046 #myNavNoAn.overlay .closebtn")) myNavNo.style.display = "none";
-                            });
+                                else if (event.target.matches("#olb-test-UK2024046 #myNavNoAn.overlay .closebtn")) myNavNo.style.display = "none";
+                            }); */
                         </script>
                     </li>
                     <li><h4>Collapsed Sidebar</h4>
