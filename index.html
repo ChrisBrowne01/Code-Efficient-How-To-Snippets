@@ -3544,9 +3544,42 @@
                         </div>
                     </li>
                     <li><h4>Vertical Button Group</h4>
-                        <style id="olb-test-UK2024052-style"></style>
-                        <div id="olb-test-UK2024052"></div>
-                        <script></script>
+                        <style id="olb-test-UK2024052-style">
+                            #olb-test-UK2024052 .btn-group button {
+                                background-color: #04AA6D; 
+                                border: 1px solid green;
+                                color: white; 
+                                padding: 10px 24px; 
+                                cursor: pointer; 
+                                width: 50%; 
+                                display: block;
+                            }
+                            #olb-test-UK2024052 .btn-group button:not(:last-child) {
+                                border-bottom: none;
+                            }
+                            #olb-test-UK2024052 .btn-group button:hover {
+                                background-color: #3e8e41;
+                            }
+                            /* style for full-width Verical Button Group */
+                            #olb-test-UK2024052 .btn-group.fw button {
+                                width: 100%;
+                            }
+                        </style>
+                        <div id="olb-test-UK2024052">
+                            <h2>Simple Vertical Button Group</h2>
+                            <div class="btn-group">
+                                <button>Make Up</button>
+                                <button>Skin</button>
+                                <button>Hair</button>
+                            </div>
+
+                            <h2>Full-Width Vertical Button Group</h2>
+                            <div class="btn-group fw">
+                                <button>Make Up</button>
+                                <button>Skin</button>
+                                <button>Hair</button>
+                            </div>
+                        </div>
                     </li>
                     <li><h4>Sticky Social Bar</h4>
                         <style id="olb-test-UK2024053-style"></style>
