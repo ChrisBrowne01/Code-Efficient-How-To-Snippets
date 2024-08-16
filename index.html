@@ -3415,18 +3415,76 @@
                     </li>
                     <li><h4>Button Group</h4>
                         <style id="olb-test-UK2024051-style">
-                            #olb-test-UK2024051 .btn-group {
-                                overflow-x: hidden;
-                                max-width: 580px;
+                            /* CSS styling for Simple Button Group */
+                            #olb-test-UK2024051 .btn-group button {
+                                background-color: #ec008c;
+                                border: 1px solid lightgrey;
+                                color: white;
+                                padding: 10px 24px; 
+                                cursor: pointer; 
+                                float: left; 
                             }
-                            #olb-test-UK2024051 .btn-group {
+                            #olb-test-UK2024051 .btn-group button:not(:last-child) {
+                                border-right: none; 
+                            }
+                            #olb-test-UK2024051 .btn-group:after {
+                                content: "";
+                                clear: both;
+                                display: table;
+                            }
+                            #olb-test-UK2024051 .btn-group button:hover {
+                                background-color: #ff4dc8;
+                            }
+                            
+                            /* CSS styling for Full width Button Group */
+                            #olb-test-UK2024051 .fw-btn-group {
                                 display: flex;
                                 justify-content: space-evenly;
                                 align-items: center;
+                                border-radius: 12px;
+                                background-color: #ec008c;
+
+                            }
+                            #olb-test-UK2024051 .fw-btn-group button {
+                                width:100%;
+                                background-color: #ec008c;
+                                border: 1px solid lightgrey;
+                                color: white;
+                                padding: 10px 24px; 
+                                cursor: pointer; 
+                                float: left; 
+                                align-self: stretch;
+                            }
+                            #olb-test-UK2024051 .fw-btn-group button:first-child {
+                                border-radius: 8px 0 0 8px;
+                            }
+                            #olb-test-UK2024051 .fw-btn-group button:last-child {
+                                border-radius: 0 8px 8px 0;
+                            }
+                            #olb-test-UK2024051 .fw-btn-group button:not(:last-child) {
+                                border-right: none; 
+                            }
+                            #olb-test-UK2024051 .fw-btn-group:after {
+                                content: "";
+                                clear: both;
+                                display: table;
+                            }
+                            #olb-test-UK2024051 .fw-btn-group button:hover {
+                                background-color: #ff4dc8;
+                            }
+
+                            /* CSS styling for Mobile Responsive Button Group */
+                            #olb-test-UK2024051 .resp-btn-group {
+                                display: flex;
+                                justify-content: space-evenly;
+                                align-items: center;
+                                max-width: 580px;
                                 border-radius: 32px;
                                 background-color: rgb(236, 0, 140);
+                                overflow-x: hidden;
                             }
-                            #olb-test-UK2024051 .btn-group button {
+                            #olb-test-UK2024051 .resp-btn-group button {
+                                width: 33%;
                                 background-color: rgb(236, 0, 140);
                                 padding: 10px 24px;
                                 color: white;
@@ -3434,7 +3492,10 @@
                                 cursor: pointer;
                                 float: left;
                             }
-                            #olb-test-UK2024051 .btn-group .indicatorSeparator {
+                            #olb-test-UK2024051 .resp-btn-group button:hover {
+                                background-color: #ff4dc8;
+                            }
+                            #olb-test-UK2024051 .resp-btn-group .indicatorSeparator {
                                 align-self: stretch;
                                 background-color: hsl(0, 0%, 80%);
                                 margin-block: 4px;
@@ -3442,15 +3503,15 @@
                                 box-sizing: border-box;
                             }
                             @media screen and (max-width: 576px) {
-                                #olb-test-UK2024051 .btn-group { 
+                                #olb-test-UK2024051 .resp-btn-group { 
                                     flex-direction: column;
                                     border-radius: 12px;
                                 }  
-                                #olb-test-UK2024051 .btn-group button {
+                                #olb-test-UK2024051 .resp-btn-group button {
                                     width: 100%;
-                                    float:none;
+                                    float: none;
                                 } 
-                                #olb-test-UK2024051 .btn-group .indicatorSeparator {
+                                #olb-test-UK2024051 .resp-btn-group .indicatorSeparator {
                                     width: auto;
                                     height: 1px;
                                     margin-inline: 8px;
@@ -3458,12 +3519,27 @@
                             }
                         </style>
                         <div id="olb-test-UK2024051">
+                            <h2>Simple Button Group</h2>
                             <div class="btn-group">
                                 <button>Apple</button>
-                                <span class="indicatorSeparator"></span>
                                 <button>Samsung</button>
-                                <span class="indicatorSeparator"></span>
                                 <button>Sony</button>
+                            </div>
+
+                            <h2>Full-Width Button Group</h2>
+                            <div class="fw-btn-group">
+                                <button>Apple</button>
+                                <button>Samsung</button>
+                                <button>Sony</button>
+                            </div>
+
+                            <h2>Mobile Responsive Button Group</h2>
+                            <div class="resp-btn-group">
+                                <button>Make Up</button>
+                                <span class="indicatorSeparator"></span>
+                                <button>Skin</button>
+                                <span class="indicatorSeparator"></span>
+                                <button>Hair</button>
                             </div>
                         </div>
                     </li>
