@@ -2866,6 +2866,7 @@
                                 float: left;
                                 width: 33.33%;      
                                 background-color: #ccc;
+                                border-right: 3px solid #ec008c;
                                 height: 250px;
                             }
                             #olb-test-UK2024044 .column a {
@@ -3582,9 +3583,60 @@
                         </div>
                     </li>
                     <li><h4>Sticky Social Bar</h4>
-                        <style id="olb-test-UK2024053-style"></style>
-                        <div id="olb-test-UK2024053"></div>
-                        <script></script>
+                        <style id="olb-test-UK2024053-style">
+                            #olb-test-UK2024053 {
+                                overflow-x: scroll;
+                                border: 4px solid lightgrey;
+                                border-radius: 4px;
+                                background-color: white;
+                                max-height: 350px;
+                                position: relative; /* remove on fixing to page */
+                            }
+                            #olb-test-UK2024053 .icon-bar {
+                                position: sticky; /* Change to fixed */
+                                top: 50%;
+                                transform: translateY(-50%);
+                                width: 55px; /* remove on fixing to page */
+                                z-index: 1000; /* remove on fixing to page */
+                            }
+                            #olb-test-UK2024053 .icon-bar a {
+                                display: block;
+                                text-align: center;
+                                padding: 16px;
+                                transition: all 0.3s ease;
+                                color: white;
+                                font-size: 20px;
+                            }
+                            #olb-test-UK2024053 .main {
+                                margin-top: -30%; /* remove on fixing to page */
+                                position: relative; /* remove on fixing to page */
+                            }
+                            #olb-test-UK2024053 .icon-bar a.facebook {background-color: blue;}
+                            #olb-test-UK2024053 .icon-bar a.twitter {background-color: lightskyblue;}
+                            #olb-test-UK2024053 .icon-bar a.google {background-color: red;}
+                            #olb-test-UK2024053 .icon-bar a.linkedin {background-color: #2980B9;}
+                            #olb-test-UK2024053 .icon-bar a.youtube {background-color: red;}
+                        </style>
+                        <div id="olb-test-UK2024053">
+                            <div class="icon-bar">
+                                <a href="#olb-test-UK2024053" class="facebook"><i class="fa fa-facebook"></i></a>
+                                <a href="#olb-test-UK2024053" class="twitter"><i class="fa fa-twitter"></i></a>
+                                <a href="#olb-test-UK2024053" class="google"><i class="fa fa-google"></i></a>
+                                <a href="#olb-test-UK2024053" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                                <a href="#olb-test-UK2024053" class="youtube"><i class="fa fa-youtube"></i></a>
+                            </div>
+                            <div class="main">
+                                <h3>Sticky Social Bar</h3>
+                                <p>The sticky social bar will stick to the screen when you scroll.</p>
+                                <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                            </div>
+                        </div>
                     </li>
                     <li><h4>Pill Navigation</h4>
                         <style id="olb-test-UK2024054-style"></style>
